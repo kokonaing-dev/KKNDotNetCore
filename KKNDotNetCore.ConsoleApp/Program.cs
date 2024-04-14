@@ -1,35 +1,14 @@
-﻿using System.Data;
-using System.Data.SqlClient;
-using System.Text;
+﻿using KKNDotNetCore.ConsoleApp;
 
-Console.WriteLine("Hello, World!");
+Console.WriteLine("CRUD With AdoDotNet");
+AdoDotNetExample adoDotNetExample = new AdoDotNetExample();
 
-SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder()
-{
-    DataSource = "kkn" ,
-    InitialCatalog = "DotNetTesting" ,
-    UserID = "sa",
-    Password =  "root"
-};
-SqlConnection connection = new SqlConnection(builder.ConnectionString);
-connection.Open();
+adoDotNetExample.Read();
+//adoDotNetExample.Create("demo title", "demo author", "demo content");
+//adoDotNetExample.Update(9, "demo update", "demo update", "updating in progress");
+//adoDotNetExample.Delete(11);
+//adoDotNetExample.Edit(2);
+//adoDotNetExample.Edit(7);
 
-string sql = "Select * From Tbl_Blog";
-SqlCommand cmd = new SqlCommand(sql, connection);
-SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-DataTable dt = new DataTable();
-adapter.Fill(dt);
-
-connection.Close();
-
-foreach (DataRow dr in dt.Rows)
-{
-    Console.WriteLine("Blog Id => " + dr["Blog_Id"]);
-    Console.WriteLine("Blog Title => " + dr["Blog_Title"]);
-    Console.WriteLine("Blog Author => " + dr["Blog_Author"]);
-    Console.WriteLine("Blog Content => " + dr["Blog_Content"]);
-    Console.WriteLine("=========================");
-
-}
 
 Console.ReadKey();
