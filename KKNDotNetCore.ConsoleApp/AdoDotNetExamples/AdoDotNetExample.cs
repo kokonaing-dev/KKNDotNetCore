@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KKNDotNetCore.ConsoleApp
+namespace KKNDotNetCore.ConsoleApp.AdoDotNetExamples
 {
     public class AdoDotNetExample
     {
@@ -58,7 +58,7 @@ namespace KKNDotNetCore.ConsoleApp
         {
             SqlConnection connection = new SqlConnection(_sqlConnectionStringBuilder.ConnectionString);
             connection.Open();
-            String query = @"INSERT INTO [dbo].[Tbl_Blog]
+            string query = @"INSERT INTO [dbo].[Tbl_Blog]
            ([Blog_Title]
            ,[Blog_Author]
            ,[Blog_Content])
@@ -104,7 +104,7 @@ namespace KKNDotNetCore.ConsoleApp
         {
             SqlConnection connection = new SqlConnection(_sqlConnectionStringBuilder.ConnectionString);
             connection.Open();
-            String query = "SELECT * FROM Tbl_Blog WHERE Blog_Id = @Blog_Id";
+            string query = "SELECT * FROM Tbl_Blog WHERE Blog_Id = @Blog_Id";
             SqlCommand sqlCommand = new SqlCommand(query, connection);
             sqlCommand.Parameters.AddWithValue("@Blog_Id", id);
             SqlDataAdapter adapter = new SqlDataAdapter(sqlCommand);
@@ -128,7 +128,7 @@ namespace KKNDotNetCore.ConsoleApp
         {
             SqlConnection connection = new SqlConnection(_sqlConnectionStringBuilder.ConnectionString);
             connection.Open();
-            String query = @"DELETE FROM Tbl_Blog WHERE Blog_Id = @Blog_Id";
+            string query = @"DELETE FROM Tbl_Blog WHERE Blog_Id = @Blog_Id";
             SqlCommand cmd = new SqlCommand(query, connection);
             cmd.Parameters.AddWithValue("@Blog_Id", id);
             int result = cmd.ExecuteNonQuery();
