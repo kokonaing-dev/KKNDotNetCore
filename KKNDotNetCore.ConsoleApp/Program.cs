@@ -1,5 +1,6 @@
 ﻿using KKNDotNetCore.ConsoleApp.AdoDotNetExamples;
 using KKNDotNetCore.ConsoleApp.DapperExamples;
+using KKNDotNetCore.ConsoleApp.EFCoreExamples;
 
 
 #region AdoDotNet
@@ -15,8 +16,13 @@ using KKNDotNetCore.ConsoleApp.DapperExamples;
 #endregion
 
 #region Dapper
-DapperExample dapperExample = new DapperExample();
-dapperExample.Run();
+//DapperExample dapperExample = new DapperExample();
+//dapperExample.Run();
+#endregion
+
+#region EF Core
+EFCoreExample eFCoreExample = new EFCoreExample();
+eFCoreExample.Run();
 #endregion
 
 Console.ReadKey();

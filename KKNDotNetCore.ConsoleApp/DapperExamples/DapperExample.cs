@@ -16,13 +16,13 @@ namespace KKNDotNetCore.ConsoleApp.DapperExamples
 
         public void Run()
         {
-            //Read();
+            Read();
             //Edit(1);
             //Edit(15);
 
             //Create("titlenew", "authornew", "contentnew");
             //Update(1, "title 2", "author 2", "content 2");
-            Delete(12);
+            //Delete(12);
         }
 
         private void Create(string title, string author, string content)
