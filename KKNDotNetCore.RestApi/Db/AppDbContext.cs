@@ -1,8 +1,8 @@
-﻿using KKNDotNetCore.ConsoleApp.Dtos;
-using KKNDotNetCore.ConsoleApp.Service;
+﻿using KKNDotNetCore.RestApi.Models;
 using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
 
-namespace KKNDotNetCore.ConsoleApp.EFCoreExamples
+namespace KKNDotNetCore.RestApi.Db
 {
     public class AppDbContext : DbContext
     {
@@ -11,6 +11,6 @@ namespace KKNDotNetCore.ConsoleApp.EFCoreExamples
             optionsBuilder.UseSqlServer(ConnectionStrings._sqlConnectionStringBuilder.ConnectionString);
         }
 
-        public DbSet<BlogDto> Blogs { get; set; }
+        public DbSet<BlogModel> Blogs { get; set; }
     }
 }
