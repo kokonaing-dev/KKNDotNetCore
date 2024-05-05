@@ -82,7 +82,7 @@ namespace KKNDotNetCore.ConsoleApp.AdoDotNetExamples
             SqlConnection connection = new SqlConnection(_sqlConnectionStringBuilder.ConnectionString);
             connection.Open();
 
-            string query = @"UPDATE [dbo].[TblBlog]
+            string query = @"UPDATE [dbo].[Tbl_Blog]
    SET [BlogTitle] = @BlogTitle
       ,[BlogAuthor] = @BlogAuthor
       ,[BlogContent] = @BlogContent
