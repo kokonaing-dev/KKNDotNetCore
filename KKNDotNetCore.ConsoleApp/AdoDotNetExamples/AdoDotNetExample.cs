@@ -28,10 +28,10 @@ namespace KKNDotNetCore.ConsoleApp.AdoDotNetExamples
             Console.WriteLine("Connection Opened...");
             Console.WriteLine("...");
 
-            string query = @"SELECT [Blog_Id]
-                  ,[Blog_Title]
-                  ,[Blog_Author]
-                  ,[Blog_Content]
+            string query = @"SELECT [BlogId]
+                  ,[BlogTitle]
+                  ,[BlogAuthor]
+                  ,[BlogContent]
               FROM [dbo].[Tbl_Blog]";
             SqlCommand cmd = new SqlCommand(query, connection);
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
@@ -47,9 +47,9 @@ namespace KKNDotNetCore.ConsoleApp.AdoDotNetExamples
 
             foreach (DataRow dr in dt.Rows)
             {
-                Console.WriteLine("Title : " + dr["Blog_Title"]);
-                Console.WriteLine("Author : " + dr["Blog_Author"]);
-                Console.WriteLine("Content : " + dr["Blog_Content"]);
+                Console.WriteLine("Title : " + dr["BlogTitle"]);
+                Console.WriteLine("Author : " + dr["BlogAuthor"]);
+                Console.WriteLine("Content : " + dr["BlogContent"]);
                 Console.WriteLine(" ");
             }
         }
@@ -58,18 +58,18 @@ namespace KKNDotNetCore.ConsoleApp.AdoDotNetExamples
         {
             SqlConnection connection = new SqlConnection(_sqlConnectionStringBuilder.ConnectionString);
             connection.Open();
-            string query = @"INSERT INTO [dbo].[Tbl_Blog]
-           ([Blog_Title]
-           ,[Blog_Author]
-           ,[Blog_Content])
+            string query = @"INSERT INTO [dbo].[TblBlog]
+           ([BlogTitle]
+           ,[BlogAuthor]
+           ,[BlogContent])
      VALUES
-           (@Blog_Title
-           ,@Blog_Author
-           ,@Blog_Content)";
+           (@BlogTitle
+           ,@BlogAuthor
+           ,@BlogContent)";
             SqlCommand cmd = new SqlCommand(query, connection);
-            cmd.Parameters.AddWithValue("@Blog_Title", title);
-            cmd.Parameters.AddWithValue("@Blog_Author", author);
-            cmd.Parameters.AddWithValue("@Blog_Content", content);
+            cmd.Parameters.AddWithValue("@BlogTitle", title);
+            cmd.Parameters.AddWithValue("@BlogAuthor", author);
+            cmd.Parameters.AddWithValue("@BlogContent", content);
             int result = cmd.ExecuteNonQuery();
             connection.Close();
             string message = result > 0 ? "Create Successfull !" : "Create Failed !";
@@ -82,16 +82,16 @@ namespace KKNDotNetCore.ConsoleApp.AdoDotNetExamples
             SqlConnection connection = new SqlConnection(_sqlConnectionStringBuilder.ConnectionString);
             connection.Open();
 
-            string query = @"UPDATE [dbo].[Tbl_Blog]
-   SET [Blog_Title] = @Blog_Title
-      ,[Blog_Author] = @Blog_Author
-      ,[Blog_Content] = @Blog_Content
- WHERE Blog_Id = @Blog_Id";
+            string query = @"UPDATE [dbo].[TblBlog]
+   SET [BlogTitle] = @BlogTitle
+      ,[BlogAuthor] = @BlogAuthor
+      ,[BlogContent] = @BlogContent
+ WHERE BlogId = @BlogId";
             SqlCommand command = new SqlCommand(query, connection);
-            command.Parameters.AddWithValue("@Blog_Id", id);
-            command.Parameters.AddWithValue("@Blog_Title", title);
-            command.Parameters.AddWithValue("@Blog_Author", author);
-            command.Parameters.AddWithValue("@Blog_Content", content);
+            command.Parameters.AddWithValue("@BlogId", id);
+            command.Parameters.AddWithValue("@BlogTitle", title);
+            command.Parameters.AddWithValue("@BlogAuthor", author);
+            command.Parameters.AddWithValue("@BlogContent", content);
             int result = command.ExecuteNonQuery();
 
             connection.Close();
@@ -104,9 +104,9 @@ namespace KKNDotNetCore.ConsoleApp.AdoDotNetExamples
         {
             SqlConnection connection = new SqlConnection(_sqlConnectionStringBuilder.ConnectionString);
             connection.Open();
-            string query = "SELECT * FROM Tbl_Blog WHERE Blog_Id = @Blog_Id";
+            string query = "SELECT * FROM Tbl_Blog WHERE BlogId = @BlogId";
             SqlCommand sqlCommand = new SqlCommand(query, connection);
-            sqlCommand.Parameters.AddWithValue("@Blog_Id", id);
+            sqlCommand.Parameters.AddWithValue("@BlogId", id);
             SqlDataAdapter adapter = new SqlDataAdapter(sqlCommand);
             DataTable dt = new DataTable();
             adapter.Fill(dt);
@@ -117,10 +117,10 @@ namespace KKNDotNetCore.ConsoleApp.AdoDotNetExamples
                 return;
             }
             DataRow dr = dt.Rows[0];
-            Console.WriteLine("Id : " + dr["Blog_Id"]);
-            Console.WriteLine("Title : " + dr["Blog_Title"]);
-            Console.WriteLine("Author : " + dr["Blog_Author"]);
-            Console.WriteLine("Content : " + dr["Blog_Content"]);
+            Console.WriteLine("Id : " + dr["BlogId"]);
+            Console.WriteLine("Title : " + dr["BlogTitle"]);
+            Console.WriteLine("Author : " + dr["BlogAuthor"]);
+            Console.WriteLine("Content : " + dr["BlogContent"]);
             Console.ReadKey();
         }
 
@@ -128,9 +128,9 @@ namespace KKNDotNetCore.ConsoleApp.AdoDotNetExamples
         {
             SqlConnection connection = new SqlConnection(_sqlConnectionStringBuilder.ConnectionString);
             connection.Open();
-            string query = @"DELETE FROM Tbl_Blog WHERE Blog_Id = @Blog_Id";
+            string query = @"DELETE FROM Tbl_Blog WHERE BlogId = @BlogId";
             SqlCommand cmd = new SqlCommand(query, connection);
-            cmd.Parameters.AddWithValue("@Blog_Id", id);
+            cmd.Parameters.AddWithValue("@BlogId", id);
             int result = cmd.ExecuteNonQuery();
             connection.Close();
             string message = result > 0 ? "Delete Successfull !" : "Delete Failed !";

@@ -29,18 +29,18 @@ namespace KKNDotNetCore.ConsoleApp.DapperExamples
         {
             BlogDto blog = new BlogDto()
             {
-                Blog_Title = title,
-                Blog_Author = author,
-                Blog_Content = content
+                BlogTitle = title,
+                BlogAuthor = author,
+                BlogContent = content
             };
             string query = @"INSERT INTO [dbo].[Tbl_Blog]
-           ([Blog_Title]
-           ,[Blog_Author]
-           ,[Blog_Content])
+           ([BlogTitle]
+           ,[BlogAuthor]
+           ,[BlogContent])
      VALUES
-           (@Blog_Title
-           ,@Blog_Author       
-           ,@Blog_Content)";
+           (@BlogTitle
+           ,@BlogAuthor       
+           ,@BlogContent)";
 
             using IDbConnection db =
                         new SqlConnection(ConnectionStrings._sqlConnectionStringBuilder.ConnectionString);
@@ -57,10 +57,10 @@ namespace KKNDotNetCore.ConsoleApp.DapperExamples
             List<BlogDto> list = db.Query<BlogDto>("select * from tbl_blog").ToList();
             foreach (BlogDto blog in list)
             {
-                Console.WriteLine("Blog Id : " + blog.Blog_Id);
-                Console.WriteLine("Blog Author : " + blog.Blog_Author);
-                Console.WriteLine("Blog Title : " + blog.Blog_Title);
-                Console.WriteLine("Blog Content : " + blog.Blog_Content);
+                Console.WriteLine("Blog Id : " + blog.BlogId);
+                Console.WriteLine("Blog Author : " + blog.BlogAuthor);
+                Console.WriteLine("Blog Title : " + blog.BlogTitle);
+                Console.WriteLine("Blog Content : " + blog.BlogContent);
                 Console.WriteLine("");
             }
 
@@ -70,8 +70,8 @@ namespace KKNDotNetCore.ConsoleApp.DapperExamples
         {
             using IDbConnection db =
                 new SqlConnection(ConnectionStrings._sqlConnectionStringBuilder.ConnectionString);
-            var item = db.Query<BlogDto>("select * from tbl_blog where blog_id=@blog_id",
-                new BlogDto { Blog_Id = id })
+            var item = db.Query<BlogDto>("select * from tbl_blog where blogid=@blogid",
+                new BlogDto { BlogId = id })
                 .FirstOrDefault();
 
             if (item is null)
@@ -80,26 +80,26 @@ namespace KKNDotNetCore.ConsoleApp.DapperExamples
                 return;
             }
 
-            Console.WriteLine(item.Blog_Id);
-            Console.WriteLine(item.Blog_Title);
-            Console.WriteLine(item.Blog_Author);
-            Console.WriteLine(item.Blog_Content);
+            Console.WriteLine(item.BlogId);
+            Console.WriteLine(item.BlogTitle);
+            Console.WriteLine(item.BlogAuthor);
+            Console.WriteLine(item.BlogContent);
         }
 
         private void Update(int id, string content, string title, string author)
         {
             BlogDto blog = new BlogDto()
             {
-                Blog_Id = id,
-                Blog_Title = title,
-                Blog_Author = author,
-                Blog_Content = content
+                BlogId = id,
+                BlogTitle = title,
+                BlogAuthor = author,
+                BlogContent = content
             };
             string query = @"UPDATE [dbo].[Tbl_Blog]
-                SET [Blog_Title] = @Blog_Title
-                   ,[Blog_Author] = @Blog_Author
-                    ,[Blog_Content] = @Blog_Content
-                WHERE Blog_Id = @Blog_Id";
+                SET [BlogTitle] = @BlogTitle
+                   ,[BlogAuthor] = @BlogAuthor
+                    ,[BlogContent] = @BlogContent
+                WHERE BlogId = @BlogId";
 
             using IDbConnection db = new SqlConnection(ConnectionStrings._sqlConnectionStringBuilder.ConnectionString);
             int result = db.Execute(query, blog);
@@ -112,9 +112,9 @@ namespace KKNDotNetCore.ConsoleApp.DapperExamples
         {
             var item = new BlogDto
             {
-                Blog_Id = id,
+                BlogId = id,
             };
-            string query = @"Delete From [dbo].[Tbl_Blog] WHERE Blog_Id = @Blog_Id";
+            string query = @"Delete From [dbo].[Tbl_Blog] WHERE BlogId = @BlogId";
             using IDbConnection db = new SqlConnection(ConnectionStrings._sqlConnectionStringBuilder.ConnectionString);
             int result = db.Execute(query, item);
 

@@ -20,9 +20,9 @@ namespace KKNDotNetCore.ConsoleApp.EFCoreExamples
         {
             BlogDto blog = new BlogDto()
             {
-                Blog_Title = title,
-                Blog_Author = author,
-                Blog_Content = content
+                BlogTitle = title,
+                BlogAuthor = author,
+                BlogContent = content
             };
 
             _context.Add(blog);
@@ -38,10 +38,10 @@ namespace KKNDotNetCore.ConsoleApp.EFCoreExamples
 
             foreach (BlogDto blog in list)
             {
-                Console.WriteLine("Blog Id : " + blog.Blog_Id);
-                Console.WriteLine("Blog Author : " + blog.Blog_Author);
-                Console.WriteLine("Blog Title : " + blog.Blog_Title);
-                Console.WriteLine("Blog Content : " + blog.Blog_Content);
+                Console.WriteLine("Blog Id : " + blog.BlogId);
+                Console.WriteLine("Blog Author : " + blog.BlogAuthor);
+                Console.WriteLine("Blog Title : " + blog.BlogTitle);
+                Console.WriteLine("Blog Content : " + blog.BlogContent);
                 Console.WriteLine("");
             }
 
@@ -50,30 +50,30 @@ namespace KKNDotNetCore.ConsoleApp.EFCoreExamples
         private void Edit(int id)
         {
 
-            var item = _context.Blogs.FirstOrDefault(blog => blog.Blog_Id == id);
+            var item = _context.Blogs.FirstOrDefault(blog => blog.BlogId == id);
             if (item is null)
             {
                 Console.WriteLine("No data found.");
                 return;
             }
 
-            Console.WriteLine(item.Blog_Id);
-            Console.WriteLine(item.Blog_Title);
-            Console.WriteLine(item.Blog_Author);
-            Console.WriteLine(item.Blog_Content);
+            Console.WriteLine(item.BlogId);
+            Console.WriteLine(item.BlogTitle);
+            Console.WriteLine(item.BlogAuthor);
+            Console.WriteLine(item.BlogContent);
         }
 
         private void Update(int id, string content, string title, string author)
         {
-            var item = _context.Blogs.FirstOrDefault(blog => blog.Blog_Id == id);
+            var item = _context.Blogs.FirstOrDefault(blog => blog.BlogId == id);
             if (item is null)
             {
                 Console.WriteLine("No data found.");
                 return;
             }
-            item.Blog_Title = title;
-            item.Blog_Author = author;
-            item.Blog_Content = content;
+            item.BlogTitle = title;
+            item.BlogAuthor = author;
+            item.BlogContent = content;
 
             int result = _context.SaveChanges();
 
@@ -83,7 +83,7 @@ namespace KKNDotNetCore.ConsoleApp.EFCoreExamples
 
         private void Delete(int id)
         {
-            var item = _context.Blogs.FirstOrDefault(blog => blog.Blog_Id == id);
+            var item = _context.Blogs.FirstOrDefault(blog => blog.BlogId == id);
             if (item is null)
             {
                 Console.WriteLine("No data found.");

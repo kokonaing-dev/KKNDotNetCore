@@ -26,7 +26,7 @@ namespace KKNDotNetCore.RestApi.Controllers
         [HttpGet("{id}")]
         public IActionResult Edit(int id)
         {
-            var item = _context.Blogs.FirstOrDefault(x => x.Blog_Id == id);
+            var item = _context.Blogs.FirstOrDefault(x => x.BlogId == id);
             if (item is null)
             {
                 return NotFound("No data found.");
@@ -47,15 +47,15 @@ namespace KKNDotNetCore.RestApi.Controllers
         [HttpPut("{id}")]
         public IActionResult Update(int id, BlogModel blog)
         {
-            var item = _context.Blogs.FirstOrDefault(x => x.Blog_Id == id);
+            var item = _context.Blogs.FirstOrDefault(x => x.BlogId == id);
             if (item is null)
             {
                 return NotFound("No data found.");
             }
 
-            item.Blog_Title = blog.Blog_Title;
-            item.Blog_Author = blog.Blog_Author;
-            item.Blog_Content = blog.Blog_Content;
+            item.BlogTitle = blog.BlogTitle;
+            item.BlogAuthor = blog.BlogAuthor;
+            item.BlogContent = blog.BlogContent;
             var result = _context.SaveChanges();
 
             string message = result > 0 ? "Updating Successful." : "Updating Failed.";
@@ -65,23 +65,23 @@ namespace KKNDotNetCore.RestApi.Controllers
         [HttpPatch("{id}")]
         public IActionResult Patch(int id, BlogModel blog)
         {
-            var item = _context.Blogs.FirstOrDefault(x => x.Blog_Id == id);
+            var item = _context.Blogs.FirstOrDefault(x => x.BlogId == id);
             if (item is null)
             {
                 return NotFound("No data found.");
             }
 
-            if (!string.IsNullOrEmpty(blog.Blog_Title))
+            if (!string.IsNullOrEmpty(blog.BlogTitle))
             {
-                item.Blog_Title = blog.Blog_Title;
+                item.BlogTitle = blog.BlogTitle;
             }
-            if (!string.IsNullOrEmpty(blog.Blog_Author))
+            if (!string.IsNullOrEmpty(blog.BlogAuthor))
             {
-                item.Blog_Author = blog.Blog_Author;
+                item.BlogAuthor = blog.BlogAuthor;
             }
-            if (!string.IsNullOrEmpty(blog.Blog_Content))
+            if (!string.IsNullOrEmpty(blog.BlogContent))
             {
-                item.Blog_Content = blog.Blog_Content;
+                item.BlogContent = blog.BlogContent;
             }
             var result = _context.SaveChanges();
 
@@ -92,7 +92,7 @@ namespace KKNDotNetCore.RestApi.Controllers
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
-            var item = _context.Blogs.FirstOrDefault(x => x.Blog_Id == id);
+            var item = _context.Blogs.FirstOrDefault(x => x.BlogId == id);
             if (item is null)
             {
                 return NotFound("No data found.");
