@@ -16,7 +16,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KKNDotNetCore.Shared", "KKN
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KKNDotNetCore.RestApiWithNLayer", "KKNDotNetCore.RestApiWithNLayer\KKNDotNetCore.RestApiWithNLayer.csproj", "{15E99D6B-02DB-4D75-8112-97C63E34EDEB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KKNDotNetCore.ConsoleAppHttpClient", "KKNDotNetCore.ConsoleAppHttpClient\KKNDotNetCore.ConsoleAppHttpClient.csproj", "{BC0DD93A-521E-4233-9FBE-518760E2C32C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KKNDotNetCore.ConsoleAppHttpClient", "KKNDotNetCore.ConsoleAppHttpClient\KKNDotNetCore.ConsoleAppHttpClient.csproj", "{BC0DD93A-521E-4233-9FBE-518760E2C32C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KKNDotNetCore.ConsoleAppHttpClientExamples", "KKNDotNetCore.ConsoleAppHttpClientExamples\KKNDotNetCore.ConsoleAppHttpClientExamples.csproj", "{753C20E6-1AC6-4BF6-800E-57ABDA11784C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -44,6 +46,10 @@ Global
 		{BC0DD93A-521E-4233-9FBE-518760E2C32C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BC0DD93A-521E-4233-9FBE-518760E2C32C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BC0DD93A-521E-4233-9FBE-518760E2C32C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{753C20E6-1AC6-4BF6-800E-57ABDA11784C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{753C20E6-1AC6-4BF6-800E-57ABDA11784C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{753C20E6-1AC6-4BF6-800E-57ABDA11784C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{753C20E6-1AC6-4BF6-800E-57ABDA11784C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
