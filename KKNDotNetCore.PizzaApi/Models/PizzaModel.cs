@@ -85,5 +85,4 @@ namespace KKNDotNetCore.PizzaApi.Models {
         public PizzaOrderInvoiceHeadModel Order { get; set; }
         public List<PizzaOrderInvoiceDetailModel> OrderDetail { get; set; }
     }
-
 }
