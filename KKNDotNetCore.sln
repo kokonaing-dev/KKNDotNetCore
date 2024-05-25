@@ -20,7 +20,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KKNDotNetCore.ConsoleAppHtt
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KKNDotNetCore.ConsoleAppHttpClientExamples", "KKNDotNetCore.ConsoleAppHttpClientExamples\KKNDotNetCore.ConsoleAppHttpClientExamples.csproj", "{753C20E6-1AC6-4BF6-800E-57ABDA11784C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KKNDotNetCore.ConsoleAppRestClientExamples", "KKNDotNetCore.ConsoleAppRestClientExamples\KKNDotNetCore.ConsoleAppRestClientExamples.csproj", "{5FE88E34-7602-4C81-9039-1237412B02EC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KKNDotNetCore.ConsoleAppRestClientExamples", "KKNDotNetCore.ConsoleAppRestClientExamples\KKNDotNetCore.ConsoleAppRestClientExamples.csproj", "{5FE88E34-7602-4C81-9039-1237412B02EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KKNDotNetCore.PizzaApi", "KKNDotNetCore.PizzaApi\KKNDotNetCore.PizzaApi.csproj", "{E9923495-38DB-45B0-BEF0-F087AD2211FF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -56,6 +58,10 @@ Global
 		{5FE88E34-7602-4C81-9039-1237412B02EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5FE88E34-7602-4C81-9039-1237412B02EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5FE88E34-7602-4C81-9039-1237412B02EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E9923495-38DB-45B0-BEF0-F087AD2211FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E9923495-38DB-45B0-BEF0-F087AD2211FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E9923495-38DB-45B0-BEF0-F087AD2211FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E9923495-38DB-45B0-BEF0-F087AD2211FF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
