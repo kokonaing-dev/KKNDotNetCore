@@ -16,6 +16,4 @@
     <ProjectReference Include="..\KKNDotNetCore.Shared\KKNDotNetCore.Shared.csproj" />
   </ItemGroup>
 
-	
-	
 </Project>

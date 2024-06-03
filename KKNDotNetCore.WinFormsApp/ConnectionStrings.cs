@@ -5,8 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace KKNDotNetCore.WinFormsApp
-{
+namespace KKNDotNetCore.WinFormsApp;
+
     public static class ConnectionStrings
     {
         public static readonly SqlConnectionStringBuilder _sqlConnectionStringBuilder = new SqlConnectionStringBuilder()
@@ -18,4 +18,4 @@ namespace KKNDotNetCore.WinFormsApp
             TrustServerCertificate = true
         };
     }
-}
+
