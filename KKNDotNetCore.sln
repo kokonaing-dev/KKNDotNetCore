@@ -7,7 +7,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KKNDotNetCore.ConsoleApp", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Document", "Document", "{767367A2-DD98-4E2A-9DB7-41FA2219840D}"
 	ProjectSection(SolutionItems) = preProject
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
 		database_script.sql = database_script.sql
+		README.md = README.md
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KKNDotNetCore.RestApi", "KKNDotNetCore.RestApi\KKNDotNetCore.RestApi.csproj", "{C678824F-7067-4DB1-8C51-BC3D2FCB0781}"
@@ -28,11 +31,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KKNDotNetCore.ConsoleAppRef
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KKNDotNetCore.WinFormsApp", "KKNDotNetCore.WinFormsApp\KKNDotNetCore.WinFormsApp.csproj", "{562B5810-1F68-4F91-BF6B-043F388BFFE9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KKNDotNetCore.NLayer.UI", "KKNDotNetCore.NLayer.UI\KKNDotNetCore.NLayer.UI.csproj", "{E7A45139-AFD5-429F-A79A-029F4E051E6B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KKNDotNetCore.NLayer.UI", "KKNDotNetCore.NLayer.UI\KKNDotNetCore.NLayer.UI.csproj", "{E7A45139-AFD5-429F-A79A-029F4E051E6B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KKNDotNetCorel.NLayer.BusinessLogic", "KKNDotNetCorel.NLayer.BusinessLogic\KKNDotNetCorel.NLayer.BusinessLogic.csproj", "{34B4EB35-80AE-4216-9939-D90D3FDB1F74}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KKNDotNetCorel.NLayer.BusinessLogic", "KKNDotNetCorel.NLayer.BusinessLogic\KKNDotNetCorel.NLayer.BusinessLogic.csproj", "{34B4EB35-80AE-4216-9939-D90D3FDB1F74}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KKNDotNetCore.NLayer.DataAccess", "KKNDotNetCore.NLayer.DataAccess\KKNDotNetCore.NLayer.DataAccess.csproj", "{97AECD1D-655F-4A68-A488-1BF8236CCBF8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KKNDotNetCore.NLayer.DataAccess", "KKNDotNetCore.NLayer.DataAccess\KKNDotNetCore.NLayer.DataAccess.csproj", "{97AECD1D-655F-4A68-A488-1BF8236CCBF8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KKNDotNetCore.MvcApp", "KKNDotNetCore.MvcApp\KKNDotNetCore.MvcApp.csproj", "{BEE0CE7E-E4A9-477C-93A3-EAB8F3786692}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -92,6 +97,10 @@ Global
 		{97AECD1D-655F-4A68-A488-1BF8236CCBF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{97AECD1D-655F-4A68-A488-1BF8236CCBF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{97AECD1D-655F-4A68-A488-1BF8236CCBF8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEE0CE7E-E4A9-477C-93A3-EAB8F3786692}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEE0CE7E-E4A9-477C-93A3-EAB8F3786692}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEE0CE7E-E4A9-477C-93A3-EAB8F3786692}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEE0CE7E-E4A9-477C-93A3-EAB8F3786692}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

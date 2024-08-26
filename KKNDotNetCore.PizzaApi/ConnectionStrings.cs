@@ -12,7 +12,7 @@ namespace KKNDotNetCore.PizzaApi
         public static readonly SqlConnectionStringBuilder _sqlConnectionStringBuilder = new SqlConnectionStringBuilder()
         {
             DataSource = ".",
-            InitialCatalog = "DotNetTesting",
+            InitialCatalog = "DotNetTraining",
             UserID = "sa",
             Password = "root",
             TrustServerCertificate = true
