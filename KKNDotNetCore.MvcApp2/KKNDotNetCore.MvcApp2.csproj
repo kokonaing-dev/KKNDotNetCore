@@ -43,17 +43,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <UpToDateCheckInput Remove="Views\Blog\Create.cshtml" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <_ContentIncludedByDefault Remove="Views\Blog\Create.cshtml" />
-    <_ContentIncludedByDefault Remove="Views\Blog\Edit.cshtml" />
     <_ContentIncludedByDefault Remove="Views\Blog\Index.cshtml" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <UpToDateCheckInput Remove="Views\Blog\Edit.cshtml" />
   </ItemGroup>
 
   <ItemGroup>

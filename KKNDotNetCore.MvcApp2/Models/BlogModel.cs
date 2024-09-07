@@ -12,4 +12,11 @@ namespace KKNDotNetCore.MvcApp2.Models
         public string? BlogAuthor { get; set; }
         public string? BlogContent { get; set; }
     }
+
+
+    public class MessageModel
+    {
+        public bool IsSuccess { get; set; }
+        public string Message { get; set; }
+    }
 }

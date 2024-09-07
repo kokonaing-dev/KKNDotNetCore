@@ -30,7 +30,7 @@ namespace KKNDotNetCore.MvcApp2.Controllers
         [ActionName("Create")]
         public IActionResult BlogCreate()
         {
-            return View("Create");
+            return View("BlogCreate");
         }
 
         [HttpPost]
@@ -39,9 +39,12 @@ namespace KKNDotNetCore.MvcApp2.Controllers
         {
             await _context.Blogs.AddAsync(blog);
             var result = await _context.SaveChangesAsync();
-            //return View("BlogCreate");
-            return Redirect("/Blog");
-            //return RedirectToAction("Index", "Blog");
+            var message = new MessageModel()
+            {
+                IsSuccess = result > 0,
+                Message = result > 0 ? "Saving Successful." : "Saving Failed."
+            };
+            return Json(message);
         }
 
         [HttpGet]
@@ -54,7 +57,7 @@ namespace KKNDotNetCore.MvcApp2.Controllers
                 return Redirect("/Blog");
             }
 
-            return View("Edit", item);
+            return View("BlogEdit", item);
         }
 
         [HttpPost]
@@ -75,24 +78,33 @@ namespace KKNDotNetCore.MvcApp2.Controllers
 
             _context.Entry(item).State = EntityState.Modified;
 
-            await _context.SaveChangesAsync();
-            return Redirect("/Blog");
+            var result = await _context.SaveChangesAsync();
+            var message = new MessageModel()
+            {
+                IsSuccess = result > 0,
+                Message = result > 0 ? "Updating Successful." : "Updating Failed."
+            };
+            return Json(message);
         }
 
-        [HttpGet]
+        [HttpPost]
         [ActionName("Delete")]
-        public async Task<IActionResult> BlogDelete(int id)
+        public async Task<IActionResult> BlogDelete(BlogModel blog)
         {
-            var item = await _context.Blogs.FirstOrDefaultAsync(x => x.BlogId == id);
+            var item = await _context.Blogs.FirstOrDefaultAsync(x => x.BlogId == blog.BlogId);
             if (item is null)
             {
                 return Redirect("/Blog");
             }
 
             _context.Blogs.Remove(item);
-            await _context.SaveChangesAsync();
-
-            return Redirect("/Blog");
+            var result = await _context.SaveChangesAsync();
+            var message = new MessageModel()
+            {
+                IsSuccess = result > 0,
+                Message = result > 0 ? "Deleting Successful." : "Deleting Failed."
+            };
+            return Json(message);
         }
     }
 }

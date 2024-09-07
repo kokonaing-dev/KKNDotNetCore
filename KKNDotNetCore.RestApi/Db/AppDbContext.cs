@@ -1,11 +1,10 @@
 ﻿using KKNDotNetCore.RestApi.Models;
 using Microsoft.EntityFrameworkCore;
-using System.Collections.Generic;
 
 namespace KKNDotNetCore.RestApi.Db
 {
     public class AppDbContext : DbContext
-    {
+    { 
         public AppDbContext(DbContextOptions options) : base(options)
         {
         }
