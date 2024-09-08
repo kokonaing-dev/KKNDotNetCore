@@ -1,0 +1,58 @@
+﻿@model DumbbellChartModel
+
+<div id="chart"></div>
+
+@section scripts{
+    <script>
+
+        var seriesData = @Html.Raw(JsonConvert.SerializeObject(Model.Series));
+
+        console.log(seriesData)
+
+        var options = {
+            series: [{
+                data: seriesData.map(item => ({
+                    x: item.X,
+                    y: item.Y
+                }))
+            }],
+            chart: {
+                height: 350,
+                type: 'rangeBar'
+            },
+            plotOptions: {
+                bar: {
+                    horizontal: true,
+                    barHeight: '50%'
+                }
+            },
+            colors: ['#FF5733', '#00C8FF'],  // Different colors for comparison
+            dataLabels: {
+                enabled: true
+            },
+            xaxis: {
+                title: {
+                    text: 'Values'
+                }
+            },
+            yaxis: {
+                title: {
+                    text: 'Categories'
+                }
+            },
+            legend: {
+                show: true,
+                position: 'top',
+                horizontalAlign: 'left'
+            },
+            title: {
+                text: 'Paygap Disparity',
+                align: 'left'
+            }
+        };
+
+
+        var chart = new ApexCharts(document.querySelector("#chart"), options);
+        chart.render();
+    </script>
+}
