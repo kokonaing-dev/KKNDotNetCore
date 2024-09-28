@@ -15,6 +15,14 @@ namespace KKNDotNetCore.MvcChartApp.Controllers
         {
             _logger.LogInformation("Line Chart in Canvas");
             return View();
+        } 
+        
+        public IActionResult ScatterChart()
+        {
+            _logger.LogInformation("Scatter Chart in Canvas");
+            return View();
         }
+
+
     }
 }
