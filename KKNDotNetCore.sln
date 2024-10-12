@@ -43,7 +43,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KKNDotNetCore.MvcApp2", "KK
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KKNDotNetCore.MvcChartApp", "KKNDotNetCore.MvcChartApp\KKNDotNetCore.MvcChartApp.csproj", "{2A9C924E-31A9-4418-8A66-03D1F3B34AF4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KKNDotNetCore.ConsoleAppLogging", "KKNDotNetCore.ConsoleAppLogging\KKNDotNetCore.ConsoleAppLogging.csproj", "{8F8CC9BB-0ECC-4C84-B047-3186EF5744F6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KKNDotNetCore.ConsoleAppLogging", "KKNDotNetCore.ConsoleAppLogging\KKNDotNetCore.ConsoleAppLogging.csproj", "{8F8CC9BB-0ECC-4C84-B047-3186EF5744F6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KKNDotNetCore.RealtimeChatApp", "KKNDotNetCore.RealtimeChatApp\KKNDotNetCore.RealtimeChatApp.csproj", "{0C7C8BC1-C537-4BBD-8E27-BD2BF62C85BF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -119,6 +121,10 @@ Global
 		{8F8CC9BB-0ECC-4C84-B047-3186EF5744F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8F8CC9BB-0ECC-4C84-B047-3186EF5744F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8F8CC9BB-0ECC-4C84-B047-3186EF5744F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C7C8BC1-C537-4BBD-8E27-BD2BF62C85BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C7C8BC1-C537-4BBD-8E27-BD2BF62C85BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C7C8BC1-C537-4BBD-8E27-BD2BF62C85BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C7C8BC1-C537-4BBD-8E27-BD2BF62C85BF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
