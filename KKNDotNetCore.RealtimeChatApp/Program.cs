@@ -1,4 +1,4 @@
-using KKNDotNetCore.RealtimeChartApp.Hubs;
+using KKNDotNetCore.RealtimeChatApp.Hubs;
 
 var builder = WebApplication.CreateBuilder(args);
 

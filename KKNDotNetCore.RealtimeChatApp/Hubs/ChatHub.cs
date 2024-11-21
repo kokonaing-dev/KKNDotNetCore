@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.SignalR;
 
-namespace KKNDotNetCore.RealtimeChartApp.Hubs
+namespace KKNDotNetCore.RealtimeChatApp.Hubs
 {
     public class ChatHub : Hub
     {
