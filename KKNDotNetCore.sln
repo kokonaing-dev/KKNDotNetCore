@@ -49,7 +49,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KKNDotNetCore.RealtimeChatA
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KKNDotNetCore.RealtimeChartApp", "KKNDotNetCore.RealtimeChartApp\KKNDotNetCore.RealtimeChartApp.csproj", "{69118FD8-B193-49CC-8B0D-EAF4075A4D23}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KKNDotNetCore.ConsoleAppCustomException", "KKNDotNetCore.ConsoleAppCustomException\KKNDotNetCore.ConsoleAppCustomException.csproj", "{076416B2-36B4-4720-9AD8-571EFE38EB2D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KKNDotNetCore.ConsoleAppCustomException", "KKNDotNetCore.ConsoleAppCustomException\KKNDotNetCore.ConsoleAppCustomException.csproj", "{076416B2-36B4-4720-9AD8-571EFE38EB2D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
