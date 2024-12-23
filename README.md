@@ -33,3 +33,13 @@ git push
 - `feat: add search functionality to navbar`
 - `fix: resolve issue with login validation`
 
+
+### Scafford EFCore Database First
+
+```bash
+Scaffold-DbContext "Server=.;Database=DotNetTesting;User ID=sa;Password=root;TrustServerCertificate=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models -Context AppDbContext
+```
+Alternate command:
+```bash
+dotnet ef dbcontext scaffold "Server=.;Database=DotNetTesting;User ID=sa;Password=root;TrustServerCertificate=True;" Microsoft.EntityFrameworkCore.SqlServer -o Models -c AppDbContext -f
+```
